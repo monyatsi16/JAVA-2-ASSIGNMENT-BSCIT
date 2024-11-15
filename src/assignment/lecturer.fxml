@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- AnchorPane layout for the lecturer's attendance interface -->
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.LecturerController" prefHeight="600" prefWidth="800">
+    <children>
+        <!-- Title Label for the Page -->
+        <Label text="Student Attendance" layoutX="20" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <!-- TableView to display student attendance -->
+        <TableView fx:id="attendanceTable" layoutX="20" layoutY="60" prefHeight="400" prefWidth="760">
+            <columns>
+                <TableColumn fx:id="studentNameCol" text="Student Name" prefWidth="200" />
+                <TableColumn fx:id="studentNumberCol" text="Student Number" prefWidth="150" />
+                <TableColumn fx:id="mondayAttendanceCol" text="Monday Attendance" prefWidth="150" />
+                <TableColumn fx:id="tuesdayAttendanceCol" text="Tuesday Attendance" prefWidth="150" />
+                <TableColumn fx:id="wednesdayAttendanceCol" text="Wednesday Attendance" prefWidth="150" />
+            </columns>
+        </TableView>
+
+        <!-- Challenges TextArea -->
+        <Label text="Challenges" layoutX="20" layoutY="480" style="-fx-font-size: 14px;" />
+        <TextArea fx:id="challengesTextArea" layoutX="100" layoutY="480" prefHeight="60" prefWidth="300" wrapText="true" />
+
+        <!-- Chapter Details TextArea -->
+        <Label text="Chapter Details" layoutX="420" layoutY="480" style="-fx-font-size: 14px;" />
+        <TextArea fx:id="chapterDetailsTextArea" layoutX="520" layoutY="480" prefHeight="60" prefWidth="300" wrapText="true" />
+
+        <!-- Button to Add Attendance -->
+        <Button fx:id="addAttendanceButton" text="Add Attendance" layoutX="250" layoutY="550" onAction="#addAttendance" style="-fx-font-size: 14px; -fx-padding: 10 20 10 20;" />
+
+        <!-- Button to Submit Report -->
+        <Button fx:id="submitReportButton" text="Submit Report" layoutX="430" layoutY="550" onAction="#submitReport" style="-fx-font-size: 14px; -fx-padding: 10 20 10 20;" />
+    </children>
+</AnchorPane>

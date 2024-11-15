@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-padding: 20; -fx-background-color: #f4f7fa; -fx-border-color: #dcdfe4; -fx-border-radius: 8; -fx-border-width: 1.5; -fx-background-radius: 8;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="assignment.AdminController">
+
+    <!-- Header Section -->
+    <Text style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: #343a40; -fx-margin-bottom: 20;" text="Admin Panel" />
+
+    <!-- Main Content Section with Scrollable Form -->
+    <ScrollPane fitToWidth="true" style="-fx-padding: 10; -fx-background-color: transparent;">
+        <GridPane alignment="CENTER" hgap="20" maxWidth="800" vgap="15">
+            <!-- Define column constraints for a responsive layout -->
+            <columnConstraints>
+                <ColumnConstraints percentWidth="45" />
+                <ColumnConstraints percentWidth="45" />
+            </columnConstraints>
+
+            <!-- Lecturer Details Section -->
+            <Text style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-fill: #495057;" text="Lecturer Details" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+            <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="lecturerNameField" maxWidth="350" promptText="Enter Lecturer Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Employee Number:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="lecturerEmployeeNumberField" maxWidth="350" promptText="Enter Employee Number" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Department:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="lecturerDepartmentField" maxWidth="350" promptText="Enter Department" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Button maxWidth="250" onAction="#handleAddLecturer" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Add Lecturer" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+
+            <Separator style="-fx-background-color: #ced4da;" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+
+            <!-- Student Details Section -->
+            <Text style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-fill: #495057;" text="Student Details" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+            <Label text="Student Name:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <TextField fx:id="studentNameField" maxWidth="350" promptText="Enter Student Name" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+            <Label text="Student Number:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <TextField fx:id="studentNumberField" maxWidth="350" promptText="Enter Student Number" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+            <Label text="Class ID:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+            <TextField fx:id="studentClassIdField" maxWidth="350" promptText="Enter Class ID" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Button maxWidth="250" onAction="#handleAddStudent" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Add Student" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+
+            <Separator style="-fx-background-color: #ced4da;" GridPane.columnSpan="2" GridPane.rowIndex="11" />
+
+            <!-- Academic Year Section -->
+            <Label text="Academic Year:" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+            <TextField fx:id="academicYearField" maxWidth="350" promptText="Enter Academic Year" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Button maxWidth="250" onAction="#handleAddAcademicYear" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Add Academic Year" GridPane.columnSpan="2" GridPane.rowIndex="13" />
+
+            <!-- Semester Section -->
+            <Label text="Semester Name:" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+            <TextField fx:id="semesterNameField" maxWidth="350" promptText="Enter Semester Name" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <Button maxWidth="250" onAction="#handleAddSemester" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Add Semester" GridPane.columnSpan="2" GridPane.rowIndex="15" />
+
+            <!-- Module Section -->
+            <Label text="Module Name:" GridPane.columnIndex="0" GridPane.rowIndex="16" />
+            <TextField fx:id="moduleNameField" maxWidth="350" promptText="Enter Module Name" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+
+            <Label text="Module Code:" GridPane.columnIndex="0" GridPane.rowIndex="17" />
+            <TextField fx:id="moduleCodeField" maxWidth="350" promptText="Enter Module Code" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <Button maxWidth="250" onAction="#handleAddModule" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Add Module" GridPane.columnSpan="2" GridPane.rowIndex="18" />
+
+            <Separator style="-fx-background-color: #ced4da;" GridPane.columnSpan="2" GridPane.rowIndex="19" />
+
+            <!-- Class Section -->
+            <Label text="Class Name:" GridPane.columnIndex="0" GridPane.rowIndex="20" />
+            <TextField fx:id="classNameField" maxWidth="350" promptText="Enter Class Name" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+            <Button maxWidth="250" onAction="#handleAddClass" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Add Class" GridPane.columnSpan="2" GridPane.rowIndex="21" />
+
+            <!-- Dropdowns -->
+            <Label prefHeight="30.0" prefWidth="379.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-fill: #495057;" text="Assign Module and Class for Lecturer" GridPane.columnSpan="2" GridPane.rowIndex="22" />
+            <Label text="Select Lecturer:" GridPane.columnIndex="0" GridPane.rowIndex="22" />
+            <ComboBox fx:id="lecturerComboBox" maxWidth="350" promptText="Select Lecturer" GridPane.columnIndex="1" GridPane.rowIndex="22" />
+
+            <Label text="Select Module:" GridPane.columnIndex="0" GridPane.rowIndex="23" />
+            <ComboBox fx:id="moduleComboBox" maxWidth="350" promptText="Select Module" GridPane.columnIndex="1" GridPane.rowIndex="23" />
+
+            <Label text="Select Class:" GridPane.columnIndex="0" GridPane.rowIndex="24" />
+            <ComboBox fx:id="classComboBox" maxWidth="350" promptText="Select Class" GridPane.columnIndex="1" GridPane.rowIndex="24" />
+            <Button maxWidth="250" onAction="#handleAssignModuleAndClass" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Assign Module and class" GridPane.columnSpan="2" GridPane.rowIndex="25" />
+
+            <!-- Student Module Assignment Section -->
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-fill: #495057;" text="Assign Module to Student" GridPane.columnSpan="2" GridPane.rowIndex="26" />
+            <Label text="Select Student:" GridPane.columnIndex="0" GridPane.rowIndex="27" />
+            <ComboBox fx:id="studentComboBox" maxWidth="350" promptText="Select Student" GridPane.columnIndex="1" GridPane.rowIndex="27" />
+
+            <Label text="Assign Module:" GridPane.columnIndex="0" GridPane.rowIndex="28" />
+            <ComboBox fx:id="assignModuleComboBox" maxWidth="350" promptText="Select Module" GridPane.columnIndex="1" GridPane.rowIndex="28" />
+            <Button maxWidth="250" onAction="#handleAssignModuleToStudent" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="Assign Module" GridPane.columnSpan="2" GridPane.rowIndex="29" />
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+
+        </GridPane>
+    </ScrollPane>
+
+    <!-- Admin Information Section -->
+    <HBox alignment="CENTER" spacing="15" style="-fx-padding: 10; -fx-background-color: transparent;">
+        <TextField fx:id="adminNameField" editable="false" maxWidth="200" promptText="Admin Name" />
+        <TextField fx:id="adminEmployeeNumberField" editable="false" maxWidth="200" promptText="Employee Number" />
+        <Button onAction="#handleViewProfile" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="View Profile" />
+    </HBox>
+
+    <!-- View Buttons Section -->
+    <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: transparent;">
+        <Button onAction="#viewAllLecturers" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="View All Lecturers" />
+        <Button onAction="#viewAllModules" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="View All Modules" />
+        <Button onAction="#viewAllSemesters" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="View All Semesters" />
+        <Button onAction="#viewAllStudents" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20;" text="View All Students" />
+    </HBox>
+
+</VBox>

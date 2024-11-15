@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.PrincipalLecturer" prefHeight="600" prefWidth="800">
+    <children>
+        <!-- Title Label for the Page -->
+        <Label text="Principal Lecturer Report" layoutX="20" layoutY="20" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-padding: 10 0;" />
+
+        <!-- Class ComboBox -->
+        <Label text="Select Class" layoutX="20" layoutY="60" style="-fx-font-size: 14px; -fx-padding: 5 0;" />
+        <ComboBox fx:id="classComboBox" layoutX="100" layoutY="60" prefWidth="200" style="-fx-font-size: 14px; -fx-pref-width: 200px; -fx-padding: 5;" />
+
+        <!-- Module ComboBox -->
+        <Label text="Select Module" layoutX="20" layoutY="100" style="-fx-font-size: 14px; -fx-padding: 5 0;" />
+        <ComboBox fx:id="moduleComboBox" layoutX="100" layoutY="100" prefWidth="200" style="-fx-font-size: 14px; -fx-pref-width: 200px; -fx-padding: 5;" />
+
+        <!-- Report Date Picker -->
+        <Label text="Report Date" layoutX="20" layoutY="140" style="-fx-font-size: 14px; -fx-padding: 5 0;" />
+        <DatePicker fx:id="reportDatePicker" layoutX="100" layoutY="140" prefWidth="200" style="-fx-font-size: 14px; -fx-pref-width: 200px; -fx-padding: 5;" />
+
+        <!-- Challenges TextArea -->
+        <Label text="Challenges" layoutX="20" layoutY="180" style="-fx-font-size: 14px; -fx-padding: 5 0;" />
+        <TextArea fx:id="challengesArea" layoutX="100" layoutY="180" prefHeight="100" prefWidth="300" wrapText="true" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-color: #f0f0f0;" />
+
+        <!-- Recommendations TextArea -->
+        <Label text="Recommendations" layoutX="420" layoutY="180" style="-fx-font-size: 14px; -fx-padding: 5 0;" />
+        <TextArea fx:id="recommendationsArea" layoutX="520" layoutY="180" prefHeight="100" prefWidth="300" wrapText="true" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-color: #f0f0f0;" />
+
+        <!-- Submit Button -->
+        <Button fx:id="submitButton" text="Submit Report" layoutX="350" layoutY="300" onAction="#submitReport" style="-fx-font-size: 14px; -fx-padding: 10 20; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 5px; -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.0, 2, 2);" />
+    </children>
+</AnchorPane>

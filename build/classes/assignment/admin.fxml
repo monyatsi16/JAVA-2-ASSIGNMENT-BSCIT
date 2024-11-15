@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="assignment.AdminController">
+
+    <children>
+        <TextField fx:id="lecturerNameField" promptText="Lecturer Name"/>
+        <TextField fx:id="lecturerIDField" promptText="Lecturer ID"/>
+        <Button fx:id="addLecturerButton" text="Add Lecturer" onAction="#handleAddLecturer"/>
+    </children>
+</VBox>
